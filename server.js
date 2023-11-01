@@ -1,10 +1,11 @@
-// Hello World in Nodejs
+const express = require("express")
 
-var http = require('http');  
-  
-http.createServer(function (req, res) {
-    res.write('Hello World!');
-    res.end();
-}).listen(4000);
-  
-console.log('Server running at 4000');
+const app = express()
+
+app.get('/',(_,res)=>{
+    res.send("hello rout")
+})
+
+app.listen(5000,()=>{
+    console.log("listning on 5000");
+})
